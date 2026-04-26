@@ -189,9 +189,13 @@ These resources were used to understand the behavior and implementation details 
    
 ### By_me
 
-1. You need to download [libft_test_main.c](https://github.com/mprifti42tech/libft_test_main). and 
-2. Put the downloaded file it in the root folder of the project.
+1. You need to download [`libft_test_main`](https://github.com/mprifti42tech/libft_test_main).
+2. Put the downloaded files it in the root folder of the project.
 3. Read the [instructions](#instructions).
+4. Run: 
+```bash 
+cc main.c test/part_1_test.c test/part_2_test.c test/part_3_test.c libft.a
+```
 
 ### By_others
 
