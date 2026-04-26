@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mprifti <mprifti@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/21 15:51:55 by mprifti           #+#    #+#             */
+/*   Updated: 2026/04/22 14:26:19 by mprifti          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	s_len;
+	size_t	len;
 
-	s_len = ft_strlen(src);
-	if (dsize == 0)
-		return (s_len);
+	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
 	i = 0;
-	while (src[i] && i < (dsize - 1))
+	while (src[i] && i < (size - 1))
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (s_len);
+	dst[i] = '\0';
+	return (len);
 }
